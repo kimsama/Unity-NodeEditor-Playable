@@ -12,7 +12,13 @@ using NodeEditorFramework;
 public class PlayableManager : MonoBehaviour 
 {
     AnimationPlayableInstance playableInst;
-    
+
+    public AnimationPlayableInstance RuntimeIntance { 
+        get { return playableInst; } 
+        private set { playableInst = value; } 
+    }
+
+
 	void Start () 
     {
         Animator animator = GetComponent<Animator>();
@@ -32,6 +38,7 @@ public class PlayableManager : MonoBehaviour
 
         // Mixing animations.
         playableInst.Execute();
+
 	}
 
     AnimationPlayableBaseNode FindNode(NodeCanvas canvas)
@@ -39,5 +46,5 @@ public class PlayableManager : MonoBehaviour
         var result = canvas.nodes.Where(n => n.GetType() == typeof(AnimationMixerPlayableNode)).FirstOrDefault();
         return (AnimationPlayableBaseNode)result;
     }
-	
+
 }

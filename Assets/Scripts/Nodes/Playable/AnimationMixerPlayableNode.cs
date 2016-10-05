@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using NodeEditorFramework;
+using NodeEditorFramework.Utilities;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 /// <summary>
 /// 
@@ -12,8 +17,8 @@ public class AnimationMixerPlayableNode : AnimationPlayableBaseNode
     private const string Id = "animationMixerPlayableNode";
     public override string GetID { get { return Id; } }
 
-    public float weight;
-
+    private float weight = 0f;
+    
     public override Node Create(Vector2 pos)
     {
         AnimationMixerPlayableNode node = CreateInstance<AnimationMixerPlayableNode>();
@@ -26,7 +31,23 @@ public class AnimationMixerPlayableNode : AnimationPlayableBaseNode
     }
     protected override void NodeGUI()
     {
-        
+        weight = RTEditorGUI.Slider(weight, 0f, 1f);
+
+#if UNITY_EDITOR
+        if (Application.isPlaying)
+        {
+            GameObject selected = Selection.activeGameObject;
+            if ( selected != null)
+            {
+                PlayableManager manager = selected.GetComponent<PlayableManager>();
+                if (manager != null)
+                {
+                    if (manager.RuntimeIntance != null)
+                        manager.RuntimeIntance.SetWeight(weight);
+                }
+            }
+        }
+#endif
     }
 
     public override bool Calculate()
