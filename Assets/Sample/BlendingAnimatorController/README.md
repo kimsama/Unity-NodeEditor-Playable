@@ -16,7 +16,7 @@ The demo was writtern with Unity 5.5.0b2.
 
 The following code shows how to create animation blend tree through code. It creates two animation blend tree, one is from animation clip and the other is from AnimatorController.
 
-```
+```csharp
     // an attack animation clip
     public AnimationClip clip;
 
@@ -53,7 +53,7 @@ With changing the weight of each clip in the blend, it can blend and change anim
 
 Pressing *'J'* plays attack animation and *'U'* set 0 for the weight value of attack animation clip so the player character start to play 'idle' animation again.
 
-```
+```csharp
     void Update()
     {
         if (Input.GetKey(KeyCode.J))
