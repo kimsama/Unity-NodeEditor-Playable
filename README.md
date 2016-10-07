@@ -17,6 +17,6 @@ git fetch NodeEditor
 git subtree add --prefix=Assets/Plugins NodeEditor master
 ```
 
-#Blending AnimatorController Demo# 
+## Blending AnimatorController Demo
 
 The demo can be found on [here](https://github.com/kimsama/Unity-NodeEditor-Playable/tree/master/Assets/Sample/BlendingAnimatorController)
