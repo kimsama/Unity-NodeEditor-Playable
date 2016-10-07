@@ -16,3 +16,7 @@ git remote add NodeEditor https://github.com/baste-RainGames/Node_Editor.git
 git fetch NodeEditor
 git subtree add --prefix=Assets/Plugins NodeEditor master
 ```
+
+#Blending AnimatorController Demo# 
+
+The demo can be found on [here](https://github.com/kimsama/Unity-NodeEditor-Playable/tree/master/Assets/Sample/BlendingAnimatorController)
