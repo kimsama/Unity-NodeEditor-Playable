@@ -7,7 +7,7 @@ Let's consider the case of making an action game something like *Monster Hunters
 Generally a player character of those kind of an action game has various attack animations depends on the type of the weapon on a player's hand.
 
 Using Mecanim's  StateMachine to set locomotion of a character is easy and the right way to get a character's movement.
-But setting all attack animations on the Mecanim's StateMachine is redundant and tedious job. Even worse things are that the necessary attack animations is continously changed whenever a player changes his or her weapon.
+But setting all attack animations on the Mecanim's StateMachine is redundant and tedious job. Even worse things are that the necessary attack animations can be continously changed whenever a player changes his or her weapon.
 
 Now there is a new way to get the job done which are called [Playable APIs](https://docs.unity3d.com/Manual/Playables.html) provided by newly version of Unity(from 5.3.x but still experimental and on going changes).
 
