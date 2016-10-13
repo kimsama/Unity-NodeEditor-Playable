@@ -2,10 +2,14 @@
 
 An experiment Unity's [Playable API](https://docs.unity3d.com/Manual/Playables.html) set with [Node Editor](https://github.com/Baste-RainGames/Node_Editor). So it works on Unity 5.4.x or higher version.
 
-![mixer-node](./Images/mixernode.gif "node")
 
-![sample](./Images/anim-mixing-sample.gif "setting")
+<p align="center">
+  <img src="./Images/mixernode.gif">
+</p>
 
+<p align="center">
+  <img src="./Images/anim-mixing-sample.gif">
+</p>
 
 Note [Node Editor](https://github.com/Baste-RainGames/Node_Editor) is added via git subtree.
 
